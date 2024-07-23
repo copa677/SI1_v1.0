@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AutoPartesCruzSRL</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script>
+        function printDiv(divId) {
+          // Agregar la clase "printable" al div que queremos imprimir
+          var divToPrint = document.querySelector('.' + divId);
+          divToPrint.classList.add('printable');
+          // Imprimir el div
+          window.print();
+          // Eliminar la clase "printable" después de imprimir
+          divToPrint.classList.remove('printable');
+        }
+    //     function toggleMenu() {
+    //   const menu = document.getElementById('container');
+    //   menu.classList.toggle('open');
+    // }
+     // JavaScript to close the menu when clicking outside
+     document.getElementById('overlay').addEventListener('click', function() {
+      document.getElementById('menu-toggle').checked = true;
+    });
+    </script>
+</head>
+<body>
+  <div class="app-root">
+    <app-root></app-root>
+  </div>
+  
+  <span class="square square-tl"></span>
+  <span class="square square-tr"></span>
+  <span class="square square-bl"></span>
+  <span class="square square-br"></span>
+  <!-- <span class="star star1"></span>
+  <span class="star star2"></span> -->
+</body>
+</html>

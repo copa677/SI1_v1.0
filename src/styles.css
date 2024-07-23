@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+    width: 100%; /* Asegura que no haya desbordamiento horizontal */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: linear-gradient(to right bottom, #ffad42, #903bff);
+    overflow: hidden; /*Previene cualquier desbordamiento*/
+    box-sizing: border-box;
+    /* z-index: 5; */
+}
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.app-root{
+
+    /* background-color: #f5f5f5; */
+    height: 100%;
+    width: 100%;
+   
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f5f5f5; */
+    height: 100%;
+}
+
+.logo {
+    /*height: 50px;*/
+    width: 80%; /* Reducción del ancho del logo */
+    max-width: 200px; /* Limitación del ancho máximo del logo */
+    margin-bottom: 10px;
+}
+
+/* .body {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+} */
+
+.square{
+    height: 50vh; /* Reduce el tamaño de los cuadrados para evitar el desbordamiento */
+    width: 50vw;
+    display: table;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    pointer-events: none;
+}
+.square.square-tl{
+    top: -25%; /* Ajusta la posición para mantener el cuadrado dentro del contenedor */
+    left: -25%;
+    animation: bounce 6s infinite ease-in-out;
+    background: rgb(34, 34, 34, 0.1);
+    /* z-index: 50; */
+}
+.square.square-tr{
+    /* top: -25%; */
+    left: -25%;
+    transform: rotate(-30deg);
+    animation: bounce 6s infinite ease-in-out;
+    /* animation: sweep 3s infinite; */
+    bottom: -10%;
+}
+.square.square-bl{
+    top: -25%; /* Ajusta la posición para mantener el cuadrado dentro del contenedor */
+    left: -25%;
+    animation: bounce 4s infinite ease-in-out;
+}
+.square.square-br{
+    top: -25%; /* Ajusta la posición para mantener el cuadrado dentro del contenedor */
+    left: -25%;
+    animation: bounce 3s infinite ease-in-out;
+    background: rgb(34, 34, 34, 0.1);
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0px) rotate(45deg);
+    }
+    50%{
+        transform: translateY(20px) rotate(0deg); 
+        border-radius: 50px;
+    }
+    100%{
+        transform: translateY(0px) rotate(45deg);
+    }
+}
+.star{
+    height: 50px;
+    width: 50px;
+    display: table;
+    position: absolute;
+    box-shadow: 0 0 5px 0 rgba(34, 34, 34, 0.5);
+    transition: 0.5s;
+}
+.star1{
+    bottom: -10%;
+    left: -30%;
+    transform: rotate(-30deg);
+    animation: sweep 4s infinite;
+    background: rgba(34, 34, 34, 0.5);
+}
+.star2{
+    bottom: -30%;
+    left: -10%;
+    transform: rotate(-30deg);
+    animation: sweep 3s infinite;
+    background: rgb(255, 255, 255, 0.5);
+}
+@keyframes sweep{
+    100%{
+        bottom: 120%; left: 120%; transform: rotate(360deg);
+    }
+}
