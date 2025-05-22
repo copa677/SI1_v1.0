@@ -3,8 +3,8 @@ import { User } from '../interfaces/user';
 import { Permiso } from '../interfaces/permiso';
 import { UserService } from '../../services/user.service';
 import { PermisosService } from '../../services/permisos.service';
-import { BitacoraService } from '../../services/bitacora.service';
 import { ToastrService } from 'ngx-toastr';
+import { BitacoraService } from '../../services/bitacora.service';
 
 @Component({
   selector: 'app-user-permisos',
@@ -25,8 +25,8 @@ export class UserPermisosComponent implements OnInit{
   constructor(
     private _userServices: UserService,
     private _permisoServices: PermisosService,
-    private _bitacoraServices: BitacoraService,
     private toastr: ToastrService,
+    private _bitacoraServices: BitacoraService
   ){
 
   }

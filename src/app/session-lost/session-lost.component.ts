@@ -1,10 +1,10 @@
 import { Component, HostListener, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
-import { BitacoraService } from '../../services/bitacora.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Bitacora } from '../interfaces/bitacora';
 import * as bootstrap from 'bootstrap';
 import { Subscription } from 'rxjs';
+import { BitacoraService } from '../../services/bitacora.service';
+import { Bitacora } from '../interfaces/bitacora';
 
 @Component({
   selector: 'app-session-lost',
@@ -22,9 +22,9 @@ export class SessionLostComponent implements OnInit, OnDestroy, AfterViewInit {
   routerSubscription: Subscription;
 
   constructor(
-    private _bitacoraServices: BitacoraService,
     private router: Router,
     private toastr: ToastrService,
+    private _bitacoraServices: BitacoraService
   ) {
     if (localStorage.getItem('isReload')) {
       localStorage.removeItem('isReload');
@@ -50,7 +50,6 @@ export class SessionLostComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
     if (!this.isLoginRoute) {
-      this.OptenerIP();
       window.addEventListener('online', this.updateOnlineStatus);
       window.addEventListener('offline', this.updateOnlineStatus);
       this.resetInactivityTimer();
@@ -163,7 +162,6 @@ export class SessionLostComponent implements OnInit, OnDestroy, AfterViewInit {
       this._bitacoraServices.newBitacora(bitacora).subscribe(()=>{
 
       });
-
       localStorage.removeItem('token');
     }
   }
@@ -189,7 +187,6 @@ export class SessionLostComponent implements OnInit, OnDestroy, AfterViewInit {
       this.toastr.error('No se encontró un token en el localStorage.', 'Error');
     }
   }
-
   OptenerIP() {
     this._bitacoraServices.obtenerDireccionIP().subscribe(
       response => {

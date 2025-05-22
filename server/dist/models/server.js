@@ -14,18 +14,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const producto_1 = __importDefault(require("../routes/producto"));
 const user_1 = __importDefault(require("../routes/user"));
-const factura_1 = __importDefault(require("../routes/factura"));
 const proveedor_1 = __importDefault(require("../routes/proveedor"));
-const almacen_1 = __importDefault(require("../routes/almacen"));
-const bitacora_1 = __importDefault(require("../routes/bitacora"));
-const inventario_1 = __importDefault(require("../routes/inventario"));
-const nota_salida_1 = __importDefault(require("../routes/nota_salida"));
 const permisos_1 = __importDefault(require("../routes/permisos"));
-const boleta_compra_1 = __importDefault(require("../routes/boleta_compra"));
 const User_1 = require("./User");
+const bitacora_1 = __importDefault(require("../routes/bitacora"));
+const producto_1 = __importDefault(require("../routes/producto"));
 class Server {
+    //constuctor
     constructor() {
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || '3001';
@@ -40,16 +36,11 @@ class Server {
         });
     }
     routes() {
-        this.app.use('/api/producto', producto_1.default);
         this.app.use('/api/users', user_1.default);
-        this.app.use('/api/factura', factura_1.default);
         this.app.use('/api/proveedor', proveedor_1.default);
-        this.app.use('/api/almacen', almacen_1.default);
-        this.app.use('/api/bitacora', bitacora_1.default);
-        this.app.use('/api/inventario', inventario_1.default);
-        this.app.use('/api/notasalida', nota_salida_1.default);
         this.app.use('/api/permisos', permisos_1.default);
-        this.app.use('/api/boletacompra', boleta_compra_1.default);
+        this.app.use('/api/producto', producto_1.default);
+        this.app.use('/api/bitacora', bitacora_1.default);
     }
     midlewares() {
         this.app.use(express_1.default.json());

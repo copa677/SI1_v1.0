@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getBitacora = exports.newBitacora = void 0;
 const bitacora_1 = require("../models/bitacora");
+//me crea una bitacora
 const newBitacora = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { nombre_usuario, ip, fechahora, descripcion } = req.body;
     try {

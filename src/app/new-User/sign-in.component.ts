@@ -5,9 +5,9 @@ import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorService } from '../../services/error.service';
-import { BitacoraService } from '../../services/bitacora.service';
 import { PermisosService } from '../../services/permisos.service';
 import { Permiso } from '../interfaces/permiso';
+import { BitacoraService } from '../../services/bitacora.service';
 
 @Component({
   selector: 'app-sign-in',

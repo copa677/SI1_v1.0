@@ -25,7 +25,6 @@ exports.Producto = conexion_1.default.define('Producto', {
     tableName: 'producto', // Nombre de la tabla existente en la base de datos
     timestamps: false // Indica que no hay columnas 'createdAt' y 'updatedAt' en la tabla
 });
-//Llamada de los procedimientos almacenador
 function callCrearProducto(marca, categoria, stock, precioCompra, precioVenta, fechaVencimineto) {
     return __awaiter(this, void 0, void 0, function* () {
         try {

@@ -25,7 +25,6 @@ exports.Bitacora = conexion_1.default.define('Bitacora', {
     tableName: 'bitacora', // Nombre de la tabla existente en la base de datos
     timestamps: false // Indica que no hay columnas 'createdAt' y 'updatedAt' en la tabla
 });
-// Llamar al procedimiento almacenado
 function callNuevaBitacora(username, IP, FechaHora, descripcion) {
     return __awaiter(this, void 0, void 0, function* () {
         try {

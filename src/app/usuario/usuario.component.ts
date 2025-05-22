@@ -28,7 +28,7 @@ export class UsuarioComponent implements OnInit{
     private _userServices: UserService,
     private _permisoServices: PermisosService,
     private toastr: ToastrService,
-    private _bitacoraServices: BitacoraService,
+    private _bitacoraServices: BitacoraService
   ){
 
   }

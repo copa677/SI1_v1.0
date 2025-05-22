@@ -1,10 +1,8 @@
 import { Sequelize } from 'sequelize';
-/*
-const url = process.env.POSTGRES_URL || 'postgresql://usuario:contraseña@localhost:5432/nombre_basedatos';
-const sequelize = new Sequelize(url)*/
 
-const sequelize = new Sequelize('AUTOREPUESTOSCRUZ','postgres','071104',{
+const sequelize = new Sequelize('AUTOREPUESTOSCRUZ','postgres','password',{
     host: 'localhost',
+    port: 5433,
     dialect: 'postgres'
 })
 export default sequelize;

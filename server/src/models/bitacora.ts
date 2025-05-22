@@ -12,7 +12,6 @@ export const Bitacora = sequelize.define('Bitacora', {
     timestamps: false // Indica que no hay columnas 'createdAt' y 'updatedAt' en la tabla
 });
 
-// Llamar al procedimiento almacenado
 
 export async function callNuevaBitacora(username: string, IP: string, FechaHora: string, descripcion: string) {
     try {

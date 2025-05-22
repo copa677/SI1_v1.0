@@ -11,7 +11,7 @@ export const Producto = sequelize.define('Producto', {
     tableName: 'producto', // Nombre de la tabla existente en la base de datos
     timestamps: false // Indica que no hay columnas 'createdAt' y 'updatedAt' en la tabla
 });
-//Llamada de los procedimientos almacenador
+
 export async function callCrearProducto(marca: string, categoria: string, stock: IntegerDataType, precioCompra: DecimalDataType, precioVenta: DecimalDataType, fechaVencimineto: Date) {
     try {
       if(fechaVencimineto ==null){

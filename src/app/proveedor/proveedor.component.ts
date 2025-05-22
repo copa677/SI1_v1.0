@@ -3,10 +3,10 @@ import { ProveedoresService } from '../../services/proveedores.service';
 import { Proveedores } from '../interfaces/proveedores';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BitacoraService } from '../../services/bitacora.service';
 import { PermisosService } from '../../services/permisos.service';
 import { Permiso } from '../interfaces/permiso';
 import { ErrorService } from '../../services/error.service';
+import { BitacoraService } from '../../services/bitacora.service';
 
 
 
@@ -30,8 +30,6 @@ export class ProveedorComponent implements OnInit{
     private router: Router,
     private _bitacoraServices:BitacoraService
   ){
-    //console.log(aRouter.snapshot.paramMap.get('codigo'));
-    
   }
 
   ngOnInit(): void {

@@ -19,7 +19,8 @@ export class AddNewProveedorComponent implements OnInit{
     private toastr: ToastrService,
     private aRouter: ActivatedRoute,
     private router: Router,
-    private _bitacoraServices:BitacoraService)
+    private _bitacoraServices:BitacoraService
+    )
   {
       this.codigo = Number(this.aRouter.snapshot.paramMap.get('codigo'));
   }

@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { deleteProduct, getProducto, newProducto, updateProducto } from '../controllers/producto';
 import validar_token from './validar_token';
-
+//rutas
 const router = Router();
 
 

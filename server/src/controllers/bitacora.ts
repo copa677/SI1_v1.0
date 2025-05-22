@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { callNuevaBitacora, obtenerBitacoras } from '../models/bitacora';
-
+//me crea una bitacora
 export const newBitacora = async (req:Request, res: Response) => {
     const {nombre_usuario,ip,fechahora,descripcion} = req.body;  
     try {

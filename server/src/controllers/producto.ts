@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { Producto, callActualizarProducto, callCrearProducto, obtenerProductos } from '../models/producto';
 
-
+//inserta un nuevo producto
 export const newProducto = async (req:Request, res: Response) => {
     const {marca, categoria, stock, precio_compra, precio_venta, fecha_vencimiento} = req.body;
     try {

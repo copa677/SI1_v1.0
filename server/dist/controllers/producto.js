@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getProducto = exports.deleteProduct = exports.updateProducto = exports.newProducto = void 0;
 const producto_1 = require("../models/producto");
+//inserta un nuevo producto
 const newProducto = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { marca, categoria, stock, precio_compra, precio_venta, fecha_vencimiento } = req.body;
     try {

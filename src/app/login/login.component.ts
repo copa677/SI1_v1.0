@@ -5,10 +5,9 @@ import { UserService } from '../../services/user.service';
 import { User } from '../interfaces/user';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorService } from '../../services/error.service';
-import { Bitacora } from '../interfaces/bitacora';
-import { BitacoraService } from '../../services/bitacora.service';
 import { PermisosService } from '../../services/permisos.service';
 import { Permiso } from '../interfaces/permiso';
+import { BitacoraService } from '../../services/bitacora.service';
 
 @Component({
   selector: 'app-login',

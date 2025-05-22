@@ -8,9 +8,8 @@ import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../../services/user.service';
 import { User } from '../interfaces/user';
 import { PermisosService } from '../../services/permisos.service';
-import { BitacoraService } from '../../services/bitacora.service';
-import { Bitacora } from '../interfaces/bitacora';
 import { Permiso } from '../interfaces/permiso';
+import { BitacoraService } from '../../services/bitacora.service';
 
 @Component({
   selector: 'app-menu',

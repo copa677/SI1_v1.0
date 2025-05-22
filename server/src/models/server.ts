@@ -1,22 +1,16 @@
 import  express, {Application}  from "express";
 import cors from 'cors'
-import routesProducto from '../routes/producto';
 import routerUser from '../routes/user';
-import routerfactura from '../routes/factura';
 import routerproveedor from '../routes/proveedor';
-import routeralmacen from '../routes/almacen';
-import routerbitacora from '../routes/bitacora';
-import routerinventario from '../routes/inventario';
-import routernotasalida from '../routes/nota_salida';
 import routerpermisos from '../routes/permisos';
-import routerboletacompra from '../routes/boleta_compra';
 import { User } from "./User";
-
+import routerbitacora from '../routes/bitacora';
+import routesProducto from '../routes/producto';
 
 class Server{
     private app: Application;
     private port: String;
-
+    //constuctor
     constructor(){
         this.app = express();
         this.port = process.env.PORT || '3001';
@@ -33,16 +27,11 @@ class Server{
     }
 
     routes(){
-        this.app.use('/api/producto', routesProducto);
         this.app.use('/api/users',routerUser);
-        this.app.use('/api/factura',routerfactura);
         this.app.use('/api/proveedor',routerproveedor);
-        this.app.use('/api/almacen',routeralmacen);
-        this.app.use('/api/bitacora',routerbitacora);
-        this.app.use('/api/inventario',routerinventario);
-        this.app.use('/api/notasalida',routernotasalida);
         this.app.use('/api/permisos',routerpermisos);
-        this.app.use('/api/boletacompra',routerboletacompra);
+        this.app.use('/api/producto', routesProducto);
+        this.app.use('/api/bitacora',routerbitacora);
     }
 
     midlewares(){

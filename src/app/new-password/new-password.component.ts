@@ -28,8 +28,9 @@ export class NewPasswordComponent implements OnInit {
   constructor(private toastr: ToastrService,
     private _userService: UserService,
     private router: Router,
+    private _errorServices: ErrorService,
     private _bitacoraServices:BitacoraService,
-    private _errorServices: ErrorService){
+  ){
   }
   
   
