@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
 //Modulos
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ProveedorComponent } from './proveedor/proveedor.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
@@ -21,13 +21,17 @@ import { SignInComponent } from './new-User/sign-in.component';
 import { NewPasswordComponent } from './new-password/new-password.component';
 import { ProductoComponent } from './producto/producto.component';
 import { BitacoraComponent } from './bitacora/bitacora.component';
-
 import { AddNewProveedorComponent } from './add-new-proveedor/add-new-proveedor.component';
 import { SessionLostComponent } from './session-lost/session-lost.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { UserPermisosComponent } from './user-permisos/user-permisos.component';
-
-
+import { ComprarComponent } from './comprar/comprar.component';
+import { NewCompraComponent } from './new-compra/new-compra.component';
+import { BoletaCompraComponent } from './boleta-compra/boleta-compra.component';
+import { NewInventarioComponent } from './new-inventario/new-inventario.component';
+import { AddNewAlmacenComponent } from './add-new-almacen/add-new-almacen.component';
+import { InventarioComponent } from './inventario/inventario.component';
+import { AlmacenesComponent } from './almacenes/almacenes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +48,12 @@ import { UserPermisosComponent } from './user-permisos/user-permisos.component';
     UserPermisosComponent,  
     ProductoComponent,
     BitacoraComponent,
+    AlmacenesComponent,
+    InventarioComponent,
+    AddNewAlmacenComponent,
+    NewInventarioComponent,
+    ComprarComponent,
+    NewCompraComponent,
   ],
   imports: [
     BrowserModule,

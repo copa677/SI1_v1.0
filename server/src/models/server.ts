@@ -6,6 +6,9 @@ import routerpermisos from '../routes/permisos';
 import { User } from "./User";
 import routerbitacora from '../routes/bitacora';
 import routesProducto from '../routes/producto';
+import routerinventario from '../routes/inventario';
+import routeralmacen from '../routes/almacen';
+import routerboletacompra from '../routes/boleta_compra';
 
 class Server{
     private app: Application;
@@ -32,6 +35,9 @@ class Server{
         this.app.use('/api/permisos',routerpermisos);
         this.app.use('/api/producto', routesProducto);
         this.app.use('/api/bitacora',routerbitacora);
+        this.app.use('/api/almacen',routeralmacen);
+        this.app.use('/api/inventario',routerinventario);
+        this.app.use('/api/boletacompra',routerboletacompra);
     }
 
     midlewares(){

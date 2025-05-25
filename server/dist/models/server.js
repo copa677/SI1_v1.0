@@ -20,6 +20,9 @@ const permisos_1 = __importDefault(require("../routes/permisos"));
 const User_1 = require("./User");
 const bitacora_1 = __importDefault(require("../routes/bitacora"));
 const producto_1 = __importDefault(require("../routes/producto"));
+const inventario_1 = __importDefault(require("../routes/inventario"));
+const almacen_1 = __importDefault(require("../routes/almacen"));
+const boleta_compra_1 = __importDefault(require("../routes/boleta_compra"));
 class Server {
     //constuctor
     constructor() {
@@ -41,6 +44,9 @@ class Server {
         this.app.use('/api/permisos', permisos_1.default);
         this.app.use('/api/producto', producto_1.default);
         this.app.use('/api/bitacora', bitacora_1.default);
+        this.app.use('/api/almacen', almacen_1.default);
+        this.app.use('/api/inventario', inventario_1.default);
+        this.app.use('/api/boletacompra', boleta_compra_1.default);
     }
     midlewares() {
         this.app.use(express_1.default.json());

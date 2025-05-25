@@ -11,6 +11,13 @@ import { UserPermisosComponent } from './user-permisos/user-permisos.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ProductoComponent } from './producto/producto.component';
 import { BitacoraComponent } from './bitacora/bitacora.component';
+import { ComprarComponent } from './comprar/comprar.component';
+import { NewCompraComponent } from './new-compra/new-compra.component';
+import { BoletaCompraComponent } from './boleta-compra/boleta-compra.component';
+import { InventarioComponent } from './inventario/inventario.component';
+import { NewInventarioComponent } from './new-inventario/new-inventario.component';
+import { AddNewAlmacenComponent } from './add-new-almacen/add-new-almacen.component';
+import { AlmacenesComponent } from './almacenes/almacenes.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login',pathMatch:'full'},
@@ -27,6 +34,14 @@ const routes: Routes = [
     { path: 'edit/:codigo', component : AddNewProveedorComponent},
     { path: 'userpermisos/:nom', component : UserPermisosComponent},
     { path: 'usuario', component : UsuarioComponent},
+    { path: 'addAlma', component : AddNewAlmacenComponent},
+    { path: 'editAlma/:id', component : AddNewAlmacenComponent},
+    { path: 'inventario', component : InventarioComponent},
+    { path: 'newInventario', component : NewInventarioComponent},
+    { path: 'comprar', component : ComprarComponent},
+    { path: 'Newcompra', component : NewCompraComponent},
+    { path: 'BoletaCompra/:cod', component : BoletaCompraComponent},
+    { path: 'almacen', component: AlmacenesComponent },
   ]},
   { path: '**',redirectTo: 'login',pathMatch:'full'},
 ];
